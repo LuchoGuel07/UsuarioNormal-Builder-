@@ -1,5 +1,3 @@
-
-
 class Usuario:
     def __init__(self, nombre, cedula, sexo, estadoCivil, direccion,deportes, entretenimiemto, vehiculo):
         
@@ -25,11 +23,11 @@ class Usuario:
     #     return self.cedula
 
     def codGenero(self,genero):
-        generos ={'M':32,'F':16,'L':8,'G':4,'B':2,'T':1}
+        generos ={'':None,'M':32,'F':16,'L':8,'G':4,'B':2,'T':1}
         self.genero = generos[genero]
 
     def codificarEstadocivil(self,estadoCivil):
-        estados = {'S':4,'C':2, 'U':1}
+        estados = {'':None,'S':4,'C':2, 'U':1}
         self.estadoCivils = estados[estadoCivil]
 
     def setTipoVehiculo(self,tipoVehiculo):
@@ -39,7 +37,7 @@ class Usuario:
         return self.vehiculo['tipo']
 
     def verDeportes(self):
-        nombres = ["Extremo", "Competencia","Contacto"]
+        nombres = ["":None,"Extremo","Competencia","Contacto"]
         indice = 0
         deportesAprobados = ""
         for deporte in self.deportes:
@@ -67,16 +65,17 @@ class Usuario:
             print("-----------------------------------------------")
 
 
-juan = Usuario("Juan Sanchez", "123456789", 'M','U',"Avenida siempreviva 123", [False,False,False],
-            {"Peliculas":["Zombieland","El regreso de los muertos vivientes","El crepusculo de los muertos", "La bella durmiente"]
-            ,"Deportes": ["Ninguno"],
-            "Libros":["Algebra de baldor","Calculo de Pourcell"]
-            },
-            {"tipo":"Bicicleta",
-            "marca": "Quintana",
-            "modelo": "Deportivo",
-            "placa": "acb123"
+# juan = Usuario("Juan Sanchez", "123456789", 'M','U',"Avenida siempreviva 123", [False,False,False],
+#             {"Peliculas":["Zombieland","El regreso de los muertos vivientes","El crepusculo de los muertos", "La bella durmiente"]
+#             ,"Deportes": ["Ninguno"],
+#             "Libros":["Algebra de baldor","Calculo de Pourcell"]
+#             },
+#             {"tipo":"Bicicleta",
+#             "marca": "Quintana",
+#             "modelo": "Deportivo",
+#             "placa": "acb123"
             
-            })
+#             })
 
-juan.verUsuario()
+
+# juan.verUsuario()
